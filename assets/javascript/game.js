@@ -58,3 +58,4 @@ if (guessesLeft > 0){
       alert("Sorry but you might want to try again?!"); 
       reset();
 }
+};
