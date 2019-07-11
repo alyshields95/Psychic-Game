@@ -32,3 +32,5 @@ if (userGuesses != compGuesses) {
     guessesLeft--,
     document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
       }
+
+    
