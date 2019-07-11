@@ -12,3 +12,10 @@ var guessedLetters = [];
 
 //key up
 document.onkeyup = function(event) {
+    var userGuesses = event.key;
+    
+//comp picks random letter
+var compGuesses = compChoices[Math.floor(Math.random() * compChoices.length)];
+
+//logs user and comp choices
+    console.log('userGuesses', userGuesses, 'compGuesses', compGuesses); 
