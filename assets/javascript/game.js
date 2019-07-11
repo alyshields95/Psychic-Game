@@ -9,3 +9,6 @@ var wins = 0;
 var losses = 0;
 var guessesLeft = 10;
 var guessedLetters = [];
+
+//key up
+document.onkeyup = function(event) {
