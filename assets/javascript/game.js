@@ -36,3 +36,25 @@ if (userGuesses != compGuesses) {
     
 // logs everything to verify working
 console.log('wins: ', wins, 'losses: ', losses, 'guesses left: ', guessesLeft, 'guessed letters: ', guessedLetters)      
+
+//Actual reset
+var reset = function() {
+    guessesLeft = 10;
+    guessedLetters = [];
+  }
+
+  //calls the reset
+if (guessesLeft > 0){
+    if (userGuesses == compGuesses) {
+      //update wins
+        document.getElementById('wins').innerHTML = "Wins: " + wins;
+        alert("OMG YOU ARE PSYCHIC!! NOW WHAT'S THE LOTTERY NUMBERS?!");
+        reset();
+    }
+    }else if(guessesLeft == 0){
+      // update losses 
+      losses++;
+      document.getElementById('losses').innerHTML = "Losses: " + losses;
+      alert("Sorry but you might want to try again?!"); 
+      reset();
+}
