@@ -10,31 +10,31 @@ var losses = 0;
 var guessesLeft = 10;
 var guessedLetters = [];
 
-//key up
+//Key up function
 document.onkeyup = function(event) {
     var userGuesses = event.key;
 
-//comp picks random letter
+//Comp picks a random letter
 var compGuesses = compChoices[Math.floor(Math.random() * compChoices.length)];
 
-//logs user and comp choices
+//Logs user and comp choices
     console.log('userGuesses', userGuesses, 'compGuesses', compGuesses); 
 
-//Logging keys pressed
+//Logging keys 
 guessedLetters.push(userGuesses);
-document.getElementById('guessedLetters').innerHTML = "Guess Letters: " + guessedLetters.join(': ');   
+document.getElementById('guessedLetters').innerHTML = "Your guesses so far: " + guessedLetters.join(': ');   
 
 //Wins & Losses
 if (userGuesses == compGuesses) {
     wins ++;
       } 
+
 if (userGuesses != compGuesses) {
     guessesLeft--,
     document.getElementById('guessesLeft').innerHTML = "Guesses Left: " + guessesLeft;
       }
 
-    
-// logs everything to verify working
+// logs everything to confirm it's working 
 console.log('wins: ', wins, 'losses: ', losses, 'guesses left: ', guessesLeft, 'guessed letters: ', guessedLetters)      
 
 //Actual reset
@@ -48,14 +48,14 @@ if (guessesLeft > 0){
     if (userGuesses == compGuesses) {
       //update wins
         document.getElementById('wins').innerHTML = "Wins: " + wins;
-        alert("OMG YOU ARE PSYCHIC!! NOW WHAT'S THE LOTTERY NUMBERS?!");
+        alert("YOU ARE A PSYCHIC!!");
         reset();
     }
     }else if(guessesLeft == 0){
       // update losses 
       losses++;
       document.getElementById('losses').innerHTML = "Losses: " + losses;
-      alert("Sorry but you might want to try again?!"); 
+      alert("Sorry! Would you like to try again?!"); 
       reset();
 }
 };
