@@ -34,3 +34,5 @@ if (userGuesses != compGuesses) {
       }
 
     
+// logs everything to verify working
+console.log('wins: ', wins, 'losses: ', losses, 'guesses left: ', guessesLeft, 'guessed letters: ', guessedLetters)      
