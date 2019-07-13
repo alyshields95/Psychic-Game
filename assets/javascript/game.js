@@ -43,16 +43,16 @@ var reset = function() {
     guessedLetters = [];
   }
 
-  //calls the reset
+
 if (guessesLeft > 0){
     if (userGuesses == compGuesses) {
-      //update wins
+
         document.getElementById('wins').innerHTML = "Wins: " + wins;
         alert("YOU ARE A PSYCHIC!!");
         reset();
     }
     }else if(guessesLeft == 0){
-      // update losses 
+
       losses++;
       document.getElementById('losses').innerHTML = "Losses: " + losses;
       alert("Sorry! Would you like to try again?!"); 
